@@ -1,0 +1,116 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+div.playground
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to right bottom,red,blue);
+    padding: 25px;
+    height: 60vh;
+}
+img
+{
+    min-height: 40vh;
+    max-height: 60vh;
+    rotate: 90deg;
+}
+.bot
+{
+    border: 2px solid limegreen;
+    height: 90%;
+    width: 20%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+    box-shadow: 10px 10px 0px 0px black;
+}
+.bot div{
+    min-width: 8.5vw;
+    min-height: 7.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 2.5px;
+}
+.bot button{
+    font-size: 15px;
+    min-width: 10vw;
+    border-radius: 5cm;
+    border: 3px solid green;
+    color: brown;
+    font: 1.1em sans-serif;
+}
+.net{
+    background-image: linear-gradient(to right bottom, red, #d6052d, #d10951, #a804de);
+    color: red;
+    background-color: white;
+}
+.net div
+{
+    color: red;
+    background-color: white;
+}
+.ai{
+    background-image: linear-gradient(to top left, blue, #3312c9, #5916c4, #f00361);
+}
+.ai div
+{
+    color: blue;
+    background-color: black;
+}
+.second{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to right,purple,blue);
+    min-height: 10vh;
+}
+input.submit
+{
+    font-size: 15px; 
+    min-width: 10vw;
+    min-height: 3.5vh;
+    border-radius: 5px;
+    border: none;
+} 
+input.move
+{
+    font-size: 15px; 
+    min-width: 10vw;
+    min-height: 3.5vh;
+} 
+.third{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to right,purple,blue);
+    min-height: 25vh;
+}
+.third p{
+    color: yellow;
+    font: 1.5em sans-serif;
+}
+button 
+{
+    font-size: 15px;
+    min-width: 10vw;
+    min-height: 5vh;
+    border-radius: 5cm;
+    background-color:aliceblue;
+    padding: 2.5px;
+}
+button:hover{
+    background-color: rgba(240, 255, 255, 0.77);
+    cursor: pointer;
+}

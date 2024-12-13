@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Function to update the countdown
+        function vsmode() {
+            $.get("/vsstate", function(data) {
+            if(data=="on"){window.location.href='/vs/';}
+                
+            });
+        }
+        vsmode();
+        //setInterval(vsmode, 1000);
+    </script>
+</head>
+
+<body>
+    <div class="playground">
+        <div class="net bot">
+            <form action="/nn/" method="post"><button name="Nn" type="submit">NeuralNet Move</button></form>
+            <div>
+                <p>Time Taken</p>
+                <h3>{{nnt}} ms</h3>
+            </div>
+            <div>
+                <p>Accuracy</p>
+                <h3>{{nnacc}}%</h3>
+            </div>
+        </div>
+        <img src="/board.svg"></img>
+        <div class="ai bot">
+            <form action="/ai/" method="post"><button name="Ai" type="submit">Negamax Move</button></form>
+            <div>
+                <p>Time Taken</p>
+                <h3>{{ait}} ms</h3>
+            </div>
+            <div>
+                <p>Accuracy</p>
+                <h3>{{aiacc}}%</h>
+            </div>
+        </div>
+    </div>
+    <div class="second">
+        <form action="/game/" method="post"><button name="New Game" type="submit">New Game</button></form>
+        <form action="/move/">
+            <input class="submit" type="submit" value="Make Human Move:">
+            <input class="move" name="move" type="text"></input></input>
+        </form>
+        <form action="/undo/" method="post"><button name="Undo" type="submit">Undo Last Move</button></form>
+    </div>
+    <div class="third">
+        <form action="/vs/" method="post"><button name="Vs" type="submit">VS Mode on</button></form>
+        <p>This is a program to compare two ml technique neuralnet and negamax</p>
+    </div>
+    </body>
+
+</html>
