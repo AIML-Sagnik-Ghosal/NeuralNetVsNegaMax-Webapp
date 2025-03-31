@@ -169,7 +169,7 @@ def quiesce(alpha, beta):
                 alpha = score
     return alpha
 def acceval(move):
-    engine = eng.SimpleEngine.popen_uci("C:\\Users\SAGNIK GHOSHAL\Downloads\stockfish-windows-x86-64-avx2\stockfish\\stockfish-windows-x86-64-avx2.exe")
+    engine = eng.SimpleEngine.popen_uci("stockfish-windows-x86-64-avx2\stockfish\\stockfish-windows-x86-64-avx2.exe")
     ma=x=0
     mi=10000
     for m in board.legal_moves:
@@ -275,5 +275,5 @@ def undo():
         traceback.print_exc()
     return main()
 board = chess.Board()
-model=model_from_json(open("C:\\Users\SAGNIK GHOSHAL\Documents\code\phython\Chess_bot\\model.json","r").read())
+model=model_from_json(open("model.json","r").read())
 app.run(debug=True)
