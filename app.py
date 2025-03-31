@@ -276,4 +276,4 @@ def undo():
     return main()
 board = chess.Board()
 model=model_from_json(open("model.json","r").read())
-app.run(debug=True)
+app.run(debug=True,host='0.0.0.0')
